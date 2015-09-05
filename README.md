@@ -1,7 +1,8 @@
 # Sieve
 Sieve is a BF extension that allows for shorter BF programs.
 
-BF (shortened from Brainfuck) is an esoteric language with only 8 commands: > < + - . ,
+BF (shortened from Brainfuck) is an esoteric language with only 8 commands: > < + - . , [ ]
+
 BF works with an infinite line of units called a tape. Each unit is set to 0 initially. With > and <, we can select
 different units of tape. > selects the unit to the right of the currently selected one and < selects the unit to
 the left. With + and -, we can increment and decrement the value in the current unit by one. , takes input and
