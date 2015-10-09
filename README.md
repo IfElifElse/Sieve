@@ -24,7 +24,12 @@ A semicolon takes integer input and stores it within the selected tape unit.
 with the input `65` would output `67`.
 
 *|*
-A vertical bar is a sieve. A sieve executes the previous command until the number in the tape unit is equal to the number within the sieve.
+A vertical bar is a sieve. A sieve executes the command after the sieve until the number in the tape unit is equal to the number within the sieve.
 
-    +|65|.
+    |65|+.
 would output H, who's ascii value is 65.
+
+You can also define a block of valid Sieve commands surrounded by curly brackets after a sieve:
+
+    |31|{++}+.
+would also output H. Loops and sieves will not work in these blocks.
