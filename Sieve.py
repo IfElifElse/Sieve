@@ -33,12 +33,16 @@ def execute(cmd):
     if cmd == ".":
         if debug == 1: print"outASCII"
         sys.stdout.write(chr(tape[tapeslct]))
-    if cmd == ";":
+    if cmd == ":":
         if debug == 1: print"out"
         sys.stdout.write(tape[tapeslct])
     if cmd == ",":
         if debug == 1: print"inASCII"
         tape[tapeslct] = ord(stdin[0])
+        stdin.pop(0)
+    if cmd == ";":
+        if debug == 1: print"in"
+        tape[tapeslct] = int(stdin[0])
         stdin.pop(0)
     if cmd == "[":
         if debug == 1: print"openloop"
@@ -91,4 +95,3 @@ while len(program) > cmdslct:
     execute(program[cmdslct])
     cmdslct += 1
 print
-
