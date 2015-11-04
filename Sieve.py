@@ -8,7 +8,7 @@ code = open(file)
 program = code.read()
 stdin = list(input("Input: "))
 
-debug = 1
+debug = 0
 
 if debug == 1: print(program)
 
